@@ -1,0 +1,38 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.score {
+    padding: 20px 60px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 6px;
+}
+
+.live {
+    display: flex;
+    font-size: 72px;
+    gap: 24px;
+}
+
+.play {
+    padding: 4px;
+    display: flex;
+}
+
+.computer, .player {
+    border: 3px solid #000;
+    width: 100px;
+    height: 100px;
+    justify-items: center;
+    align-items: center;
+}
