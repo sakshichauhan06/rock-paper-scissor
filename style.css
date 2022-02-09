@@ -1,4 +1,5 @@
 html, body {
+    font-family: 'Raleway', sans-serif;
     height: 100%;
     width: 100%;
 }
@@ -26,13 +27,26 @@ html, body {
 
 .play {
     padding: 4px;
+    gap: 240px;
     display: flex;
+    justify-content: center;
 }
 
 .computer, .player {
-    border: 3px solid #000;
-    width: 100px;
-    height: 100px;
-    justify-items: center;
-    align-items: center;
+    width: 140px;
+    height: 140px;
+}
+
+.choices {
+    display: flex;
+    padding: 80px;
+    gap: 30px;
+    justify-content: center;
+}
+
+.bx {
+    padding: 12px;
+    width: 90px;
+    height: 90px;
+    text-align: center;
 }
