@@ -1,4 +1,34 @@
-// let computerSelection, playerSelection;
+const playerSelection = document.getElementsByClassName('choices');
+playerSelection.addEventListener('click', func);
+
+function func(e) {
+    console.log(playerSelection);
+}
+console.log(playerSelection);
+
+
+
+
+
+
+
+
+// let computerSelection;
+
+// const playerSelection = document.getElementById()
+
+// playerSelection.addEventListener('click', select)
+
+// playerSelection.forEach(btn => {
+//     if(this.classList === rock) {
+//         return Rock;
+//     } else if(this.classList == paper) {
+//         return Paper;
+//     } else {
+//         return Scissor;
+//     }
+// })
+
 
 // function computerPlay() {
 //     let x = Math.floor(Math.random() * 3) + 1;
@@ -38,13 +68,13 @@
 //     return ans;
 // }
 
-// function game() {
-//     for(let i = 0; i<5; i++) {
-//         playerSelection = window.prompt();
-//         console.log(computerPlay());
-//         console.log(playerSelection);
-//         console.log(playRound(playerSelection, computerSelection));
-//     }
-// }
+// // function game() {
+// //     for(let i = 0; i<5; i++) {
+// //         playerSelection = window.prompt();
+// //         console.log(computerPlay());
+// //         console.log(playerSelection);
+// //         console.log(playRound(playerSelection, computerSelection));
+// //     }
+// // }
 
-// game();
+// // game();

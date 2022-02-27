@@ -10,33 +10,33 @@
 </head>
 <body>
     <div class="score">
-        <div class="header">Score</div>
+        <div class="score-header">Score</div>
         <div class="live">
-            <div class="player-score">0</div>
+            <div id="player-score">0</div>
             <div class="divi">:</div>
-            <div class="comp-score">0</div>
+            <div id="comp-score">0</div>
         </div>
     </div>
     <div class="play">
-        <div class="player box">
+        <div class="player box" id="player">
             <img src="img/rock.png" alt="" width="140px" style="transform: rotate(90deg);">
         </div>
-        <div class="computer box">
+        <div class="computer box" id="player">
             <img src="img/paper.png" alt="" width="140px" style="transform: rotate(-90deg);">
         </div>
     </div>
     <div class="choices">
         <div class="rock bx">
             <img src="img/rock.png" alt="rock" width="90px">
-            <span>rock</span>
+            <button class="btn" id="rock">rock</button>
         </div>
         <div class="paper bx">
             <img src="img/paper.png" alt="paper" width="90px">
-            <span>paper</span>
+            <button class="btn" id="paper">paper</button>
         </div>
         <div class="scissor bx">
             <img src="img/scissor.png" alt="scissor" width="90px">
-            <span>scissor</span>
+            <button class="btn" id="scissor">scissor</button>
         </div>
     </div>
 </body>
