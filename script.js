@@ -1,80 +1,67 @@
-const playerSelection = document.getElementsByClassName('choices');
-playerSelection.addEventListener('click', func);
 
-function func(e) {
-    console.log(playerSelection);
-}
-console.log(playerSelection);
+// var playerSelection = document.getElementById('btn').addEventListener("click", btnClick);
 
-
-
-
-
-
-
-
-// let computerSelection;
-
-// const playerSelection = document.getElementById()
-
-// playerSelection.addEventListener('click', select)
-
-// playerSelection.forEach(btn => {
-//     if(this.classList === rock) {
-//         return Rock;
-//     } else if(this.classList == paper) {
-//         return Paper;
-//     } else {
-//         return Scissor;
+// function btnClick(e) {
+//     var  x = e.target.className;
+//     if(x == "rock" || x == "paper" || x == "scissor") {
+//         return e.target.className;
 //     }
-// })
+//     return "no";
+// }
 
+// console.log(playerSelection);
 
-// function computerPlay() {
-//     let x = Math.floor(Math.random() * 3) + 1;
+function computerPlay() {
+    let x = Math.floor(Math.random() * 3) + 1;
 
-//     if (x == 1) {
-//         computerSelection = "Rock";
-//     } else if(x == 2) {
-//         computerSelection = "Paper";
-//     } else {
-//         computerSelection = "Scissor";
-//     }
+    if (x == 1) {
+        computerSelection = "Rock";
+    } else if(x == 2) {
+        computerSelection = "Paper";
+    } else {
+        computerSelection = "Scissor";
+    }
     
-//     return computerSelection;
-// }
+    return computerSelection;
+}
 
-// function playRound(playerSelection, computerSelection) {
-//     let ans = "not played";
-//     if(playerSelection == "Rock" && computerSelection == "Rock") {
-//         ans = "It's a tie!";
-//     } else if(playerSelection == "Paper" && computerSelection == "Paper") {
-//         ans = "It's a tie!";
-//     } else if(playerSelection == "Scissor" && computerSelection == "Scissor") {
-//         ans = "It's a tie!";
-//     } else if(playerSelection == "Rock" && computerSelection == "Paper") {
-//         ans = "You Lose! Paper beats Rock";
-//     } else if(playerSelection == "Rock" && computerSelection == "Scissor") {
-//         ans = "You Win! Rock beats Scissor";
-//     } else if(playerSelection == "Paper" && computerSelection == "Rock") {
-//         ans = "You Win! Paper beats Rock";
-//     } else if(playerSelection == "Paper" && computerSelection == "Scissor") {
-//         ans = "You Loose! Scissor beats Paper";
-//     } else if(playerSelection == "Scissor" && computerSelection == "Rock") {
-//         ans = "You Lose! Rock beats Scissor";
-//     } else if(playerSelection == "Scissor" && computerSelection == "Paper") {
-//         ans = "You Win! Scissor beats Paper";
-//     }
-//     return ans;
-// }
+computerPlay();
+const compScore = document.getElementById('comp-score');
+const playerScore = document.getElementById('player-score');
+const commentBox = document.getElementById('comment-box');
+var playerSelection = document.getElementById('btn').addEventListener("click", function(e) {
+    const x = e.target.className;
+    // if(x && (x.className == "rock" || x.className == "paper" || x.className == "scissor")) {
+    //     playerScore.innerHTML++;
+    // }
+    if((x == "Rock" && computerSelection == "Rock") || (x == "Paper" && computerSelection == "Paper") || (x == "Scissor" && computerSelection == "Scissor")) {
+        commentBox.innerHTML = "It's a tie!"
+    } else if((x == "Rock" && computerSelection == "Scissor") || (x == "Scissor" && computerSelection == "Paper") || (x == "Paper" && computerSelection == "Rock")) {
+        playerScore.innerHTML++;
+        commentBox.innerHTML = "";
+    } else {
+        compScore.innerHTML++;
+        commentBox.innerHTML = "";
+    }
+})
 
-// // function game() {
-// //     for(let i = 0; i<5; i++) {
-// //         playerSelection = window.prompt();
-// //         console.log(computerPlay());
-// //         console.log(playerSelection);
-// //         console.log(playRound(playerSelection, computerSelection));
-// //     }
-// // }
+console.log(playerScore);
 
-// // game();
+let playerImg = document.querySelector('.player-img');
+let rockBtn = document.querySelector('.Rock');
+let paperBtn = document.querySelector('.Paper');
+let scissorBtn = document.querySelector('.Scissor');
+
+rockBtn.addEventListener('click', () => {
+    playerImg.src = "img/rock.png";
+})
+
+paperBtn.addEventListener('click', () => {
+    playerImg.src = "img/paper.png";
+})
+
+scissorBtn.addEventListener('click', () => {
+    playerImg.src = "img/scissor.png";
+})
+
+

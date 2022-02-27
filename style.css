@@ -27,9 +27,17 @@ html, body {
 
 .play {
     padding: 4px;
-    gap: 240px;
+    gap: 80px;
     display: flex;
     justify-content: center;
+}
+
+.comment {
+    display: flex;
+    width: 180px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .computer, .player {
@@ -51,12 +59,13 @@ html, body {
     text-align: center;
 }
 
-.btn {
+#btn-design {
     background-color: beige;
     margin: 20px;
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
 }
+
 
 
