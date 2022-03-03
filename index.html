@@ -4,11 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>RPS Game</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 <body>
-    
+    <div class="score">
+        <div class="score-header">Score</div>
+        <div class="live">
+            <div id="player-score">0</div>
+            <div class="divi">:</div>
+            <div id="comp-score">0</div>
+        </div>
+    </div>
+    <div class="play">
+        <div class="player box" id="player">
+            <img src="img/rock.png" alt="" id="player-img" width="140px" style="transform: rotate(90deg);">
+        </div>
+        <div class="comment" id="comment-box">
+            <span></span>
+        </div>
+        <div class="computer box" id="computer">
+            <img src="img/paper.png" alt="" id="comp-img" width="140px" style="transform: rotate(-90deg);">
+        </div>
+    </div>
+    <div class="choices" id="btn">
+        <div class="rock bx">
+            <img src="img/rock.png" alt="rock" width="90px">
+            <input type="button" class="Rock" id="btn-design" onclick="changeImage()" value="rock">
+            <!-- <button class="Rock" id="btn-design">rock</button> -->
+        </div>
+        <div class="paper bx">
+            <img src="img/paper.png" alt="paper" width="90px">
+            <input type="button" class="Paper" id="btn-design" onclick="changeImage()" value="paper">
+            <!-- <button class="Paper" id="btn-design">paper</button> -->
+        </div>
+        <div class="scissor bx">
+            <img src="img/scissor.png" alt="scissor" width="90px">
+            <input type="button" class="Scissor" id="btn-design" onclick="changeImage()" value="scissor">
+            <!-- <button class="Scissor"id="btn-design">scissor</button> -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
